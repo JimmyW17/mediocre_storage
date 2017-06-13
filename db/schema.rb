@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170613152615) do
+ActiveRecord::Schema.define(version: 20170613155647) do
+
+  create_table "upload_files", force: :cascade do |t|
+    t.string "file_name"
+    t.integer "file_size"
+    t.string "file_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
